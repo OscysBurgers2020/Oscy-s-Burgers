@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscy's Burgers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <p>Free Delivery on Orders Over $100!</p>
+        </div>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Oscys Burgers Logo">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li id="about-us-nav"><a href="about us.html">About Us</a>
+                        <nav class="secondary-nav" id="secondaryNav">
+                            <ul>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="catering.html">Catering</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                    <li><a href="order online.html" class="order-now">Order Online</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/me/"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/oscysburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="images/instagram-icon.png" alt="Instagram"></a>
+                <a href="https://x.com/Thinley1058218/photo"><img src="images/x-icon.jpg" alt="Twitter"></a>
+            </div>
+        </div>
+    </header>
+    <section class="about-us">
+        <h2 class="section-title">About Us</h2>
+        <div class="content">
+            <img src="images/about-us.jpg" alt="Burger Hut" class="about-img">
+            <div class="text-content">
+                <p>Welcome to Oscy's Burgers! We are passionate about delivering the best burgers in town with a unique twist. Our mission is to create mouth-watering experiences for all burger lovers.</p>
+                <p>From our classic Signature Burger to our fiery Spicy Burger, every bite is crafted with fresh ingredients and a lot of love. Our graffiti-themed restaurant provides a vibrant and fun atmosphere for friends and families to enjoy.</p>
+                <p>We believe in quality, creativity, and customer satisfaction. Join us at Oscy's Burgers and be a part of our burger-loving community!</p>
+                <a href="#" class="cta-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="legal-links">
+                <h4>Legal Links</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutUsNav = document.getElementById('about-us-nav');
+            const secondaryNav = document.getElementById('secondaryNav');
+
+            aboutUsNav.addEventListener('mouseenter', function() {
+                secondaryNav.classList.add('active');
+            });
+
+            aboutUsNav.addEventListener('mouseleave', function() {
+                secondaryNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

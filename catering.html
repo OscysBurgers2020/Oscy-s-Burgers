@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscy's Burgers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <p>Free Delivery on Orders Over $100!</p>
+        </div>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Oscys Burgers Logo">
+            </div>
+                     <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li id="about-us-nav"><a href="about us.html">About Us</a>
+                        <nav class="secondary-nav" id="secondaryNav">
+                            <ul>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="catering.html">Catering</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                    <li><a href="order online.html" class="order-now">Order Online</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/me/"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/oscysburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="images/instagram-icon.png" alt="Instagram"></a>
+                <a href="https://x.com/Thinley1058218/photo"><img src="images/x-icon.jpg" alt="Twitter"></a>
+            </div>
+        </div>
+    <section class="catering-packages">
+        <h2>Our Catering Packages</h2>
+        <div class="packages-grid">
+            <div class="package">
+                <img src="images/package1.jpg" alt="Classic Burger Package">
+                <h3>Classic Burger Package</h3>
+                <p>A selection of our classic burgers with sides.</p>
+                <p><strong>Price: $200</strong></p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="package">
+                <img src="images/package2.jpg" alt="Deluxe Burger Package">
+                <h3>Deluxe Burger Package</h3>
+                <p>Includes gourmet burgers and premium sides.</p>
+                <p><strong>Price: $350</strong></p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="package">
+                <img src="images/package3.jpg" alt="Vegetarian Package">
+                <h3>Vegetarian Package</h3>
+                <p>A variety of delicious vegetarian burgers and sides.</p>
+                <p><strong>Price: $250</strong></p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="package">
+                <img src="images/package4.jpg" alt="Custom Package">
+                <h3>Custom Package</h3>
+                <p>Contact us to customize your own package.</p>
+                <a href="#contact" class="cta-button">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial">
+                <p>"Oscy's Burgers made our event a hit! The burgers were amazing and the service was top-notch."</p>
+                <p>- Jane Doe, Corporate Event</p>
+            </div>
+            <div class="testimonial">
+                <p>"Best catering experience ever! The burger-eating competition was a huge success. Highly recommend!"</p>
+                <p>- John Smith, Private Party</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Event Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <input type="number" id="guests" name="guests" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Submit</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="legal-links">
+                <h4>Legal Links</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+	<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutUsNav = document.getElementById('about-us-nav');
+            const secondaryNav = document.getElementById('secondaryNav');
+
+            aboutUsNav.addEventListener('mouseenter', function() {
+                secondaryNav.classList.add('active');
+            });
+
+            aboutUsNav.addEventListener('mouseleave', function() {
+                secondaryNav.classList.remove('active');
+            });
+        });
+    </script>
+    <script> 
+	document.addEventListener('DOMContentLoaded', () => {
+    const testimonials = document.querySelectorAll('.testimonial');
+    let currentTestimonial = 0;
+
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            testimonial.style.transform = `translateX(${100 * (i - index)}%)`;
+        });
+    }
+
+    setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    }, 3000); 
+
+    showTestimonial(currentTestimonial);
+});
+	</script>
+</body>
+</html>

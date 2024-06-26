@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscy's Burgers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <p>Free Delivery on Orders Over $100!</p>
+        </div>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Oscys Burgers Logo">
+            </div>
+             <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li id="about-us-nav"><a href="about us.html">About Us</a>
+                        <nav class="secondary-nav" id="secondaryNav">
+                            <ul>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="catering.html">Catering</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                    <li><a href="order online.html" class="order-now">Order Online</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/me/"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/oscysburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="images/instagram-icon.png" alt="Instagram"></a>
+                <a href="https://x.com/Thinley1058218/photo"><img src="images/x-icon.jpg" alt="Twitter"></a>
+            </div>
+        </div>
+    </header>
+	<section class="special-offers">
+        <div class="offer-banner" id="offer-banner">
+            <div class="offer-details">
+                <h3>Exclusive Deal!</h3>
+                <p>Get 20% off on your first order. Use code: <strong>SAVE20</strong></p>
+                <a href="discount code.html" class="cta-button">Enter Discount Code</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        const banner = document.getElementById('offer-banner');
+        const backgrounds = [
+            'url("images/background1.jpg")',
+            'url("images/"background2.jpg")',
+            'url("images/background3.jpg")'
+            
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % backgrounds.length;
+            banner.style.backgroundImage = backgrounds[currentIndex];
+        }
+        setInterval(changeBackground, 200);
+    </script>
+    <section class="featured-menu">
+        <h2 class="section-title">Featured Menu Items</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="images/burger1.jpg" alt="Oscy Burger">
+                <h3>Oscy Burger</h3>
+                <p>Grilled Beef patty, American Style cheese, lettuce, onion & tomato, with Oscy's secret sauce.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/burger2.jpg" alt="Spicy Burger">
+                <h3></h3>
+                <p>A fiery delight with jalapeños and hot sauce.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/burger3.jpg" alt="Veggie Burger">
+                <h3>Veggie Burger</h3>
+                <p>A delicious vegetarian option with a mix of fresh veggies.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/burger4.jpg" alt="Smokey BBQ Burger">
+                <h3>Smokey BBQ Burger</h3>
+                <p>A savory burger with smokey BBQ sauce and crispy bacon.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/burger5.jpg" alt="Chicken Dance Burger">
+                <h3>Chicken Dance Burger</h3>
+                <p>Crispy fried chicken with tangy sauce and fresh lettuce.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/hotdogs.jpg" alt="Oscy's Hot Dogs">
+                <h3>Oscy's Hot Dogs</h3>
+                <p>Delicious hot dogs with a variety of toppings.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/sweetpotato.jpg" alt="Sweet Potato Fries">
+                <h3>Sweet Potato Fries</h3>
+                <p>Sweet and crispy fries made from fresh sweet potatoes.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/loadedfries.jpg" alt="Loaded Fries">
+                <h3>Loaded Fries</h3>
+                <p>Fries loaded with cheese, bacon, and special sauce.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/wings.jpg" alt="Buffalo Wings">
+                <h3>Buffalo Wings</h3>
+                <p>Spicy buffalo wings served with blue cheese dip.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/mozzarella.jpg" alt="Mozzarella Sticks">
+                <h3>Mozzarella Sticks</h3>
+                <p>Cheesy mozzarella sticks served with marinara sauce.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/kidsburger.jpg" alt="Kid's Junior Burger">
+                <h3>Kid's Junior Burger</h3>
+                <p>A kid-sized burger with cheese and fresh lettuce.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/softdrinks.jpg" alt="Soft Drinks">
+                <h3>Soft Drinks</h3>
+                <p>A variety of refreshing soft drinks.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/milkshakes.jpg" alt="Milk Shakes">
+                <h3>Milk Shakes</h3>
+                <p>Creamy milk shakes in various flavors.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="images/icecream.jpg" alt="Oscy's Ice Cream">
+                <h3>Oscy's Ice Cream</h3>
+                <p>Delicious ice cream with a variety of toppings.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+    </section>
+	<footer class="footer">
+    <div class="footer-container">
+        <div class="legal-links">
+            <h4>Legal Links</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+</footer>
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutUsNav = document.getElementById('about-us-nav');
+            const secondaryNav = document.getElementById('secondaryNav');
+
+            aboutUsNav.addEventListener('mouseenter', function() {
+                secondaryNav.classList.add('active');
+            });
+
+            aboutUsNav.addEventListener('mouseleave', function() {
+                secondaryNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

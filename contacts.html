@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscy's Burgers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <p>Free Delivery on Orders Over $100!</p>
+        </div>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Oscys Burgers Logo">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li id="about-us-nav"><a href="about us.html">About Us</a>
+                        <nav class="secondary-nav" id="secondaryNav">
+                            <ul>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="catering.html">Catering</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                    <li><a href="order online.html" class="order-now">Order Online</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/me/"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/oscysburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="images/instagram-icon.png" alt="Instagram"></a>
+                <a href="https://x.com/Thinley1058218/photo"><img src="images/x-icon.jpg" alt="Twitter"></a>
+            </div>
+        </div>
+    </header>
+ <body>
+    <section class="contact-section">
+        <h2 class="section-title">Contact Us</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="review">Review:</label>
+                <select id="review" name="review" required>
+                    <option value="">Select Rating</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+            </div>
+            <button type="submit" class="cta-button">Submit</button>
+        </form>
+        <div id="form-response" class="form-response"></div>
+    </section>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const review = document.getElementById('review').value;
+            
+            if (name && email && message && review) {
+                document.getElementById('form-response').innerText = 'Thank you for your feedback!';
+                document.getElementById('contact-form').reset();
+            } else {
+                document.getElementById('form-response').innerText = 'Please fill in all fields.';
+            }
+        });
+    </script>
+	<footer class="footer">
+    <div class="footer-container">
+        <div class="legal-links">
+            <h4>Legal Links</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+</footer>
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutUsNav = document.getElementById('about-us-nav');
+            const secondaryNav = document.getElementById('secondaryNav');
+
+            aboutUsNav.addEventListener('mouseenter', function() {
+                secondaryNav.classList.add('active');
+            });
+
+            aboutUsNav.addEventListener('mouseleave', function() {
+                secondaryNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
